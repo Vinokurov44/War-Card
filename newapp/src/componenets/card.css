@@ -1,0 +1,33 @@
+
+.card {
+    position: relative; /* Add relative position to create a stacking context */
+    border: 1px solid rgb(54, 53, 53);
+    background-color: rgb(54, 53, 53);
+    width: 125px;
+    height: 185px;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    
+    
+}
+
+.card::after {
+    content: ''; /* Add empty content to generate pseudo-element */
+    position: absolute; /* Set absolute position to position the inner border */
+    top: 5px; /* Adjust the top position to position the inner border */
+    left: 5px; /* Adjust the left position to position the inner border */
+    right: 5px; /* Adjust the right position to position the inner border */
+    bottom: 5px; /* Adjust the bottom position to position the inner border */
+    border: 2px solid rgb(243, 240, 231); /* Set the inner border color */
+    border-radius: 5px; /* Set the inner border radius to match the card */
+}
+
+.cards {
+    margin-left: 40%;
+}
+
+.h1 {
+    color: rgb(243, 240, 231);
+    font-size: 60px;
+    margin-top: 50px;
+}

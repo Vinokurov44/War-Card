@@ -1,0 +1,174 @@
+
+#main{
+    background-image:url('https://funart.pro/uploads/posts/2021-04/thumbs/1618421432_3-funart_pro-p-oboi-fon-temnii-fon-3.jpg') ;
+    
+}
+.c-checkbox {
+    display: none;
+  }
+  .c-checkbox:checked + .c-formContainer .c-form {
+    width: 0.1cm;
+    background-image: url('https://funart.pro/uploads/posts/2021-04/thumbs/1618421432_3-funart_pro-p-oboi-fon-temnii-fon-3.jpg');
+  }
+  .c-checkbox:checked + .c-formContainer .c-form__toggle {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  .c-checkbox:checked + .c-formContainer .c-form__input,
+  .c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+    transition: 0.2s 0.1s;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .c-formContainer,
+  .c-form,
+  .c-form__toggle {
+    width: 50%;
+    height: 2cm;
+    
+  }
+  
+  .c-formContainer {
+    position: relative;
+    font-weight: 400;
+  }
+  
+  .c-form,
+  .c-form__toggle {
+    position: absolute;
+    border-radius: 34px;
+    
+    background-color: rgb(54, 53, 53);
+    transition: 0.2s;
+  }
+  
+  .c-form {
+    left: 100%;
+    transform: translateX(-50%);
+    padding: 0.25em;
+    box-sizing: border-box;
+
+    box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .c-form__toggle {
+    color: rgb(243, 240, 231);
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .c-form__toggle::before {
+    font-size: 1.75em;
+    content: attr(data-title);
+  }
+  
+  .c-form__input,
+  .c-form__button {
+    font: inherit;
+    border: 0;
+    outline: 0;
+border-radius: 16px;
+    box-sizing: border-box;
+  }
+  
+  .c-form__input,
+  .c-form__buttonLabel {
+    font-size: 1.75em;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.7);
+    transition: 0s;
+  }
+  
+  .c-form__input {
+    color: rgb(54, 53, 53);
+   border: 3px solid rgb(54, 53, 53);
+    height: 1.4cm;
+    width: 200px;
+    padding: 0 0.714em;
+  }
+
+
+
+
+  .c-form__buttonLabel {
+    color: rgb(243, 240, 231);
+    
+    height: 1.4cm;
+    width: 100px;
+  }
+  .c-form__buttonLabel::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    cursor: pointer;
+  }
+  
+  .c-form__button {
+    color: inherit;
+    height: 100%;
+    width: 5em;
+    background-color: rgb(54, 53, 53);
+    border: 2px solid rgb(243, 240, 231); ;
+
+  }
+
+
+
+  .square_btn{
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1.4em;
+    text-decoration: none;
+    background: rgb(54, 53, 53);/*Button Color*/
+    border: 4px solid rgb(243, 240, 231); ;
+    color: rgb(243, 240, 231);
+    border-bottom: solid 5px rgb(83, 81, 81);/*daker than background*/
+    border-right: solid 5px rgb(43, 42, 42);/*darker than background*/
+    border-radius: 10px;
+}
+
+.square_btn:before{    
+
+
+
+    border-color: transparent;
+}
+
+.square_btn:after{   
+    content: " ";
+    position: absolute;
+    top: -1px;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border-width: 0px 6px 6px 0px;
+
+    border-bottom-color: transparent;
+}
+
+.square_btn:active{ /*on click*/
+    border:none;
+    -ms-transform: translate(6px,6px);
+    -webkit-transform: translate(6px,6px);
+    transform: translate(6px,6px);/*move LowerRight*/
+}
+
+.square_btn:active:after,
+.square_btn:active:before {/*on click*/
+    content: none;/*Border disappears*/
+}

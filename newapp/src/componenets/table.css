@@ -1,0 +1,12 @@
+table{
+    border: 1px solid rgb(243, 240, 231);;
+    border-collapse: collapse;
+    margin-left: 28%;
+    margin-top:  1.5cm;
+    margin-bottom: 1.5cm;
+    width: 12cm;
+}
+td{
+    border: 0.5px solid rgb(243, 240, 231);;
+      color: rgb(243, 240, 231); 
+}
